@@ -6,45 +6,26 @@ namespace my {
 	class RandomAccesIteratorBase : public std::iterator<std::random_access_iterator_tag, ValueType>
 	{
 	public:
-		RandomAccesIteratorBase() final;
+		RandomAccesIteratorBase();
 
-		RandomAccesIteratorBase(const RandomAccesIteratorBase&) final;
-		RandomAccesIteratorBase& operator=(const RandomAccesIteratorBase&) final;
+		RandomAccesIteratorBase(const RandomAccesIteratorBase&);
+		RandomAccesIteratorBase& operator=(const RandomAccesIteratorBase&);
 
-		RandomAccesIteratorBase(RandomAccesIteratorBase&&) noexcept final;
-		RandomAccesIteratorBase& operator=(RandomAccesIteratorBase&&) noexcept final;
+		RandomAccesIteratorBase(RandomAccesIteratorBase&&) noexcept;
+		RandomAccesIteratorBase& operator=(RandomAccesIteratorBase&&) noexcept;
 
-		RandomAccesIteratorBase(ValueType*) final;
+		RandomAccesIteratorBase(ValueType*);
 
-		ValueType& operator*() const final;
-		ValueType* operator->()const final;
-		virtual ValueType& operator[](const ptrdiff_t&);
+		ValueType& operator*() const;
+		ValueType* operator->() const;
 
-		virtual RandomAccesIteratorBase& operator++();
-		RandomAccesIteratorBase operator++(int) final;
-		RandomAccesIteratorBase operator+(const ptrdiff_t&) final;
-		RandomAccesIteratorBase& operator+=(const ptrdiff_t&) final;
+		bool operator!=(const RandomAccesIteratorBase&) const;
+		bool operator==(const RandomAccesIteratorBase&) const;
 
-		virtual RandomAccesIteratorBase& operator--();
-		RandomAccesIteratorBase operator--(int) final;
-		RandomAccesIteratorBase& operator-=(const ptrdiff_t&) final;
-		RandomAccesIteratorBase operator-(const ptrdiff_t&) final;
-		virtual ptrdiff_t operator-(const RandomAccesIteratorBase&);
-
-
-
-		bool operator<(const RandomAccesIteratorBase&) const final;
-		bool operator>(const RandomAccesIteratorBase&) const final;
-		bool operator>=(const RandomAccesIteratorBase&) const final;
-		bool operator<=(const RandomAccesIteratorBase&) const final;
-		bool operator!=(const RandomAccesIteratorBase&) const final;
-		bool operator==(const RandomAccesIteratorBase&) const final;
-
-		~RandomAccesIteratorBase() final;
-	private:
+		virtual ~RandomAccesIteratorBase();
+	protected:
 		ValueType* m_ptr;
 	};
 
-	template <class U>
-	RandomAccesIteratorBase<U> operator+(const ptrdiff_t&, const RandomAccesIteratorBase<U>&);
 }
+#include "RandomAccesIteratorBase.inl"
