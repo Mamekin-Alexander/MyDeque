@@ -1,5 +1,5 @@
 #pragma once
-#include "Deque.h"
+#include "deque.h"
 #include <assert.h>
 #include <iostream>
 

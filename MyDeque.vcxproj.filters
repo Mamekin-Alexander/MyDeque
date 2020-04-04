@@ -23,7 +23,7 @@
     <ClInclude Include="RandomAccessIteratorBase.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Deque.h">
+    <ClInclude Include="deque.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

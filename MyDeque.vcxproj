@@ -141,7 +141,7 @@
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Deque.h" />
+    <ClInclude Include="deque.h" />
     <ClInclude Include="RandomAccessIteratorBase.h" />
   </ItemGroup>
   <ItemGroup>
