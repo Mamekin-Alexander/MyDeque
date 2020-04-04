@@ -1,13 +1,24 @@
-#include "Vector.h"
+#include "Deque.h"
 #include <iostream>
+#include <vld.h>
 int main()
 {
-	my::Vector<int> v = { 1,2,3,4 };
-	my::Vector<int>::Iterator i = v.begin();
-	while (i != v.end())
+	Deque<int> d;
+	for (int32_t i = 0; i < 1000; ++i)
 	{
-		std::cout << *i;
-		i++;
+		d.PushBack(i);
+	}
+	for (int32_t i = 0; i < 1000; ++i)
+	{
+		d.PopFront();
+	}
+	for (int32_t i = 0; i < 1000; ++i)
+	{
+		d.PushBack(i);
+	}
+	for (int32_t i = 0; i < d.Size(); ++i)
+	{
+		std::cout<<d[i]<<'\n';
 	}
 	return 0;
 }

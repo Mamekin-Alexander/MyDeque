@@ -23,9 +23,15 @@
     <ClInclude Include="RandomAccessIteratorBase.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Deque.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="RandomAccesIteratorBase.inl">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Deque.inl">
       <Filter>Source Files</Filter>
     </None>
   </ItemGroup>
